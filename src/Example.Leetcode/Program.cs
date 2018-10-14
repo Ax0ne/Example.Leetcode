@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Example.Leetcode
 {
@@ -6,7 +7,9 @@ namespace Example.Leetcode
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var test = new UnitTest();
+            test.TestArray();
+            Console.ReadLine();
         }
     }
 }
