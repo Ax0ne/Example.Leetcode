@@ -9,6 +9,7 @@ namespace Example.Leetcode
         {
             var test = new UnitTest();
             test.TestArray();
+            test.TestSingleLinkedList();
             Console.ReadLine();
         }
     }

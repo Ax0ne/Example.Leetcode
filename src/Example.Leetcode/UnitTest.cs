@@ -9,7 +9,7 @@ namespace Example.Leetcode
 {
     public class UnitTest
     {
-        public class TestArrayObj
+        public class TestObj
         {
             public int Value { get; set; }
             public override string ToString()
@@ -36,6 +36,26 @@ namespace Example.Leetcode
             Console.WriteLine($"删除index={7}");
             array.Delete(7);
             Console.WriteLine(array);
+        }
+        public void TestSingleLinkedList()
+        {
+            Console.WriteLine("singly linkedlist");
+            var instance = new DS.SingleLinkedList<int>();
+            for (int i = 0; i < 11; i++)
+            {
+                instance.Insert(i);
+            }
+            Console.WriteLine(instance);
+            Console.WriteLine("insert before");
+            var node = instance.FindNode(5);
+            instance.InsertBefore(node, 44);
+            Console.WriteLine(instance);
+            Console.WriteLine("insert after");
+            instance.InsertAfter(node, 999);
+            Console.WriteLine(instance);
+            Console.WriteLine("delete node");
+            instance.Delete(999);
+            Console.WriteLine(instance);
         }
     }
 }
