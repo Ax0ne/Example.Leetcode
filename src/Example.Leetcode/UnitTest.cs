@@ -56,6 +56,9 @@ namespace Example.Leetcode
             Console.WriteLine("delete node");
             instance.Delete(999);
             Console.WriteLine(instance);
+            Console.WriteLine("reverse");
+            instance.Reverse();
+            Console.WriteLine(instance.ToString());
         }
         public void TestLinkedList()
         {

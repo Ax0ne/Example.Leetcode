@@ -72,7 +72,30 @@ namespace Example.Leetcode.DataStructure
 
             return null;
         }
-
+        // 单链表反转
+        public void Reverse()
+        {
+            // 这个写起来还是比较绕，我加点注释
+            Node _head = null; // 一个新的head node
+            Node previous = null; // 存储未反转node的next节点，也就是当前node的previous指向
+            var node = head; // 要反转的node
+            while (node != null)
+            {
+                // 得到下个node
+                var nextNode = node.next;
+                // 如果nextnode==null，说明反转完毕，赋值新的head
+                if (nextNode == null)
+                    _head = node;
+                // 倒序思维，得到当前node反转后的next指向
+                node.next = previous;
+                // 倒序思维，下次循环的next节点的值等于当前节点
+                previous = node;
+                // 赋值 node 继续循环
+                node = nextNode;
+            }
+            // 最后记得把新的head赋值给真正的head
+            head = _head;
+        }
 
         public class Node
         {
