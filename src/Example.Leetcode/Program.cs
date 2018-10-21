@@ -8,8 +8,9 @@ namespace Example.Leetcode
         static void Main(string[] args)
         {
             var test = new UnitTest();
-            test.TestArray();
-            test.TestSingleLinkedList();
+            //test.TestArray();
+            //test.TestSingleLinkedList();
+            test.TestLinkedList();
             Console.ReadLine();
         }
     }

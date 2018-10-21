@@ -57,5 +57,23 @@ namespace Example.Leetcode
             instance.Delete(999);
             Console.WriteLine(instance);
         }
+        public void TestLinkedList()
+        {
+            Console.WriteLine("test linkedlist");
+            var instance = new DS.LinkedList<int>();
+            for (int i = 0; i < 11; i++)
+            {
+                instance.InsertToHead(i);
+            }
+            Console.WriteLine(instance.ToString());
+            Console.WriteLine("test find linkedlist");
+            var node = instance.Find(5);
+            Console.WriteLine($"find 5 equals {node.data}");
+            Console.WriteLine("delete node value 4 and 7");
+            instance.Delete(4);
+            instance.Delete(7);
+            Console.WriteLine(instance.ToString());
+
+        }
     }
 }
