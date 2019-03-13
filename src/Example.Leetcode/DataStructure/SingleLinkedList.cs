@@ -45,7 +45,6 @@ namespace Example.Leetcode.DataStructure
 
         public void Delete(T value)
         {
-            var node = new Node(value, null);
             var n = head;
             // 实际不能用简单的equals
             while (n.next != null && !n.next.value.Equals(value))
@@ -95,6 +94,11 @@ namespace Example.Leetcode.DataStructure
             }
             // 最后记得把新的head赋值给真正的head
             head = _head;
+        }
+        // 检测
+        public void CheckCircle()
+        {
+
         }
 
         public class Node
