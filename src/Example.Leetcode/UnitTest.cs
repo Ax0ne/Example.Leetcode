@@ -78,5 +78,43 @@ namespace Example.Leetcode
             Console.WriteLine(instance.ToString());
 
         }
+
+        public void TestBinaryTree()
+        {
+            var tree = new DS.BinaryTree<string>("A");
+            var root = tree.GetRoot();
+            tree.InsertLeft(root, "B");
+            tree.InsertRight(root, "C");
+            var rleft = root.left;
+            tree.InsertLeft(rleft, "D");
+            tree.InsertRight(rleft, "E");
+            var rRight = root.right;
+            tree.InsertLeft(rRight, "End");
+            Console.WriteLine("前序遍历");
+            tree.PreOrder(root);
+            Console.WriteLine("中序遍历");
+            tree.MiOrder(root);
+            Console.WriteLine("后序遍历");
+            tree.PostOrder(root);
+        }
+
+        public void TestBinarySearchTree()
+        {
+            var btree = new DS.BinarySearchTree();
+            btree.Insert(5);
+            btree.Insert(8);
+            btree.Insert(1);
+            btree.Insert(3);
+            btree.Insert(4);
+            btree.Insert(6);
+            btree.Insert(7);
+            btree.MiOrder(btree.GetRoot());
+            Console.WriteLine(btree.Find(5).Data);
+            Console.WriteLine(btree.GetMax().Data);
+            Console.WriteLine(btree.GetMin().Data);
+            btree.Delete(7);
+            btree.Delete(3);
+            btree.Delete(1);
+        }
     }
 }
