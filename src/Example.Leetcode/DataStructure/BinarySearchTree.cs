@@ -71,8 +71,10 @@ namespace Example.Leetcode.DataStructure
             while (node != null)
             {
                 parentNode = node;
-                if (value < node.Data) node = node.Left;
-                else if (value > node.Data) node = node.Right;
+                if (value < node.Data)
+                    node = node.Left;
+                else if (value > node.Data)
+                    node = node.Right;
                 if (value == node.Data)
                 {
                     target = node;
@@ -99,11 +101,16 @@ namespace Example.Leetcode.DataStructure
             }
             // 情况 2
             Node child = null;
-            if (target.Left != null) child = target.Left;
-            else if (target.Right != null) child = target.Right;
-            if (parentNode == null) _root = child;
-            else if (parentNode.Left == target) parentNode.Left = child;
-            else parentNode.Right = child;
+            if (target.Left != null)
+                child = target.Left;
+            else if (target.Right != null)
+                child = target.Right;
+            if (parentNode == null)
+                _root = child;
+            else if (parentNode.Left == target)
+                parentNode.Left = child;
+            else
+                parentNode.Right = child;
         }
 
         public void MiOrder(Node node)

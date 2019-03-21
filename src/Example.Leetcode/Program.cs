@@ -7,7 +7,6 @@ namespace Example.Leetcode
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             var test = new UnitTest();
@@ -24,7 +23,8 @@ namespace Example.Leetcode
             //PalindromeExample.IsPalindrome("abcddcba");
             //PalindromeExample.IsPalindromeLinked("abcddcba");
             //test.TestBinaryTree();
-            test.TestBinarySearchTree();
+            //test.TestBinarySearchTree();
+            ThreadExample.PrintNumber();
             Console.ReadLine();
         }
     }
