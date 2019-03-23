@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
+using Example.Leetcode.Algorithm;
 using Example.Leetcode.DataStructure;
 using Example.Leetcode.Problems;
 
@@ -24,8 +26,14 @@ namespace Example.Leetcode
             //PalindromeExample.IsPalindromeLinked("abcddcba");
             //test.TestBinaryTree();
             //test.TestBinarySearchTree();
-            ThreadExample.PrintNumber();
+            //ThreadExample.PrintNumber();
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    AlgorithmTest.TestSnowflake();
+            //}
             Console.ReadLine();
         }
+
     }
+
 }

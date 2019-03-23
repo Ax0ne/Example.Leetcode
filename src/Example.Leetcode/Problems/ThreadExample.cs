@@ -76,7 +76,7 @@ namespace Example.Leetcode.Problems
             {
                 preSemaphore.WaitOne();
                 Interlocked.Increment(ref index);
-                if (index > 99)
+                if (index > 999)
                     return;
                 Console.WriteLine($"{Thread.CurrentThread.Name}：{index}");
                 curSemaphore.Release();
